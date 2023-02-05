@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "fullname": "Narendra",
+      "grade": "12",
+      "gender": "Male",
+      "pickUpLocation": "Nideban",
+      "contact": "1234569871",
+      "id": 1
+    },
+    {
+      "fullname": "Ravikiran",
+      "grade": "15",
+      "gender": "Male",
+      "pickUpLocation": "Udgir",
+      "contact": "7485961236",
+      "id": 2
+    },
+    {
+      "fullname": "Abhishek",
+      "grade": "11",
+      "gender": "Male",
+      "pickUpLocation": "Nanded",
+      "contact": "9632587412",
+      "id": 3
+    },
+    {
+      "fullname": "Shubham M",
+      "grade": "14",
+      "gender": "Male",
+      "pickUpLocation": "hydrabad",
+      "contact": "8945693256",
+      "id": 5
+    },
+    {
+      "fullname": "Ramdas",
+      "grade": "11",
+      "gender": "Male",
+      "pickUpLocation": "Aurad",
+      "contact": "1234567890",
+      "id": 6
+    },
+    {
+      "fullname": "Bapurao Reddy",
+      "grade": "11",
+      "gender": "Male",
+      "pickUpLocation": "pune ",
+      "contact": "9876543212",
+      "id": 7
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

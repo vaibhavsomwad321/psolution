@@ -1,0 +1,137 @@
+<div class="row py-5">
+  <div class="col10">
+    <div class="f-information">
+      <h1>Registration form</h1>
+
+      <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <div class="col6 form-group name-info">
+          <label for="fullname"><strong>FullName *</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="fullname"
+            required
+          />
+          <ng-container
+            *ngIf="
+              studentForm.get('fullname')?.invalid &&
+              studentForm.get('fullname')?.touched
+            "
+          >
+            <span *ngIf="studentForm.get('fullname')?.hasError('required')">
+              <span class="text-danger"> Full Name Is Required </span>
+            </span>
+          </ng-container>
+          <ng-container
+            *ngIf="
+              studentForm.get('fullname')?.dirty &&
+              studentForm.get('fullname')?.touched
+            "
+          >
+            <span *ngIf="studentForm.get('fullname')?.errors?.['nospaceError']">
+              {{studentForm.get('fullname')?.errors?.['nospaceError']}}
+            </span>
+          </ng-container>
+        </div>
+        <div class="col6 form-group name-info">
+          <label for="grade"><strong>Grade *</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="grade"
+            required
+          />
+          <ng-container
+            *ngIf="
+              studentForm.get('grade')?.invalid &&
+              studentForm.get('grade')?.touched
+            "
+          >
+            <span *ngIf="studentForm.get('grade')?.hasError('required')">
+              <span class="text-danger"> Grade Is Required </span>
+            </span>
+          </ng-container>
+          <ng-container
+            *ngIf="
+              studentForm.get('grade')?.dirty &&
+              studentForm.get('grade')?.touched
+            "
+          >
+            <span *ngIf="studentForm.get('grade')?.errors?.['nospaceError']">
+              {{studentForm.get('grade')?.errors?.['nospaceError']}}
+            </span>
+          </ng-container>
+        </div>
+
+        <div class="col6 form-group name-info1">
+          <label for=""><strong>gender </strong></label><br />
+          <ng-container *ngFor="let gender of genderArray">
+            <label [for]="gender">
+              <input
+                type="radio"
+                class="mx-2"
+                formControlName="gender"
+                [value]="gender"
+                [id]="gender"
+              />&nbsp;{{ gender }}
+            </label>
+          </ng-container>
+        </div>
+        <div class="col6 form-group name-info">
+          <label for="pickUpLocation"><strong>PickUpLocation *</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pickUpLocation"
+            required
+          />
+          <ng-container
+            *ngIf="
+              studentForm.get('pickUpLocation')?.invalid &&
+              studentForm.get('pickUpLocation')?.touched
+            "
+          >
+            <span
+              *ngIf="studentForm.get('pickUpLocation')?.hasError('required')"
+            >
+              <span class="text-danger"> PickUpLocation Is Required </span>
+            </span>
+          </ng-container>
+          <ng-container
+            *ngIf="
+              studentForm.get('pickUpLocation')?.dirty &&
+              studentForm.get('pickUpLocation')?.touched
+            "
+          >
+            <span
+              *ngIf="studentForm.get('pickUpLocation')?.errors?.['nospaceError']"
+            >
+              {{studentForm.get('pickUpLocation')?.errors?.['nospaceError']}}
+            </span>
+          </ng-container>
+        </div>
+        <div class="col6 form-group name-info">
+          <label for="contact"><strong>Contact </strong></label>
+          <input type="text" class="form-control" formControlName="contact" />
+        </div>
+        <div class="col6 form-group name-info">
+          <button
+            class="btn btn-primary"
+            *ngIf="flag"
+            [disabled]="studentForm.invalid"
+          >
+            Add Student
+          </button>
+          <button
+            class="btn btn-primary"
+            *ngIf="!flag"
+            (click)="onUpdate()"
+            type="button"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

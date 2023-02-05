@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Project Tools
+
+ install => npm node package manager (Please init befor executing)
+ install => JSON server and run db.json
+ install => jsPDF pkg(it is used to export PDF)
+ install => Angular CSV(It is used to export CSV/Excle)
+ install => Angular CLI# angulartask

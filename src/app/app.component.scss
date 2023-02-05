@@ -1,0 +1,23 @@
+div[class^='col']{
+    margin: 0 auto;
+}
+
+.col4{
+    width: calc(100%*3/12);
+}
+
+.col6{
+    width: 50%;
+}
+
+.col8{
+    width: calc(100%*8/12);
+}
+
+.col10{
+    width: calc(100%*10/12);
+}
+
+.container{
+    margin: 0 auto;
+}

@@ -1,0 +1,79 @@
+.row{
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+div[class^='col']{
+    margin: 0 auto;
+}
+
+.col4{
+    width: calc(100%*3/12);
+}
+
+.col6{
+    width: 50%;
+}
+
+.col8{
+    width: calc(100%*8/12);
+}
+
+.col10{
+    width: calc(100%*10/12);
+}
+input,select, textarea{
+    &.ng-invalid.ng-touched{
+        border: 2px solid red;
+    }
+    &.ng-dirty.ng-invalid{
+        border: 2px solid red;
+
+    }
+}
+
+
+.name-info, .name-info1{
+    padding: 5px;
+}
+.name-info input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    // border: 2px solid rgb(157, 157, 244);
+}
+.name-info input:focus{
+    border: 2px solid rgb(157, 157, 244);
+    box-shadow: 0px 0px 4px 0px rgb(157, 157, 244,.5);
+}
+.name-info label, .name-info1 label{
+    padding: 5px;
+    display: inline-block;
+}
+
+.name-info .btn{
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: #000;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.f-information{
+    // border: 2px solid rgba(0, 0, 0,.5);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0,.5);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+.f-information h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+.btn{
+    cursor: pointer;
+}

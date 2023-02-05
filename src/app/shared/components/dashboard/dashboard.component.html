@@ -1,0 +1,61 @@
+<div class="">
+  <input
+    type="text"
+    placeholder="Search Your FullName"
+    (keyup)="onInputSearch($event)"
+    #search
+    class="search-info"
+  />
+  <div class="table-info table-res">
+    <div id="content" #content>
+      <table id="table">
+        <thead>
+          <th>Sr no</th>
+          <th>fullName</th>
+          <th>Grade</th>
+          <th>Gender</th>
+          <th>PickUpLocation</th>
+          <th>Contact</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </thead>
+
+        <tbody id="content">
+          <tr *ngFor="let student of studentArray; index as i">
+            <td>
+              {{ i + 1 }}
+            </td>
+            <td>
+              {{ student.fullname }}
+            </td>
+            <td>
+              {{ student.grade }}
+            </td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.pickUpLocation }}</td>
+            <td>{{ student.contact }}</td>
+            <td>
+              <button
+                class="btn button-success"
+                [routerLink]="['/addstudent', student.id]"
+              >
+                Edit
+              </button>
+            </td>
+            <td>
+              <button class="btn button-error" (click)="onDelete(student.id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="button " (click)="clickDownload()" class="download">
+      Download Exel
+    </button>
+    <button type="button" (click)="makePdf()" class="download">
+      Download PDF
+    </button>
+  </div>
+</div>
